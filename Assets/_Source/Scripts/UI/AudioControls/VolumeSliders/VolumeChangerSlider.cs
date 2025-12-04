@@ -3,12 +3,13 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]
-public class VolumeChangerSlider : MonoBehaviour
+public abstract class VolumeChangerSlider : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private string _audioMixerParameter;
 
     private Slider _slider;
+
+    protected abstract string AudioMixerParameter { get; }
 
     private void Awake()
         => _slider = GetComponent<Slider>();
@@ -24,7 +25,7 @@ public class VolumeChangerSlider : MonoBehaviour
 
     private void SetVolume(float value)
     {
-        float volume = 20 * Mathf.Log10(value);
-        _audioMixer.SetFloat(_audioMixerParameter, volume);
+        float volume = value > 0 ? 20 * Mathf.Log10(value) : AudionMixerValueLevels.Min;
+        _audioMixer.SetFloat(AudioMixerParameter, volume);
     }
 }

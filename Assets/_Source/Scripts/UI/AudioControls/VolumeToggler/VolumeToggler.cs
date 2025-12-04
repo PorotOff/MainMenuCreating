@@ -6,9 +6,6 @@ public class VolumeToggler : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
 
-    private const float MinAudioMixerValue = -80f;
-    private const float MaxAudioMixerValue = 0f;
-
     private SimpleToggle _simpleToggle;
 
     private void Awake()
@@ -21,5 +18,5 @@ public class VolumeToggler : MonoBehaviour
         => _simpleToggle.Toggled -= Toggle;
 
     private void Toggle(bool isActive)
-        => _audioMixer.SetFloat(AudioMixerExposedParameters.MasterVolume, isActive ? MaxAudioMixerValue : MinAudioMixerValue);
+        => _audioMixer.SetFloat(AudioMixerExposedParameters.MasterVolume, isActive ? AudionMixerValueLevels.Max : AudionMixerValueLevels.Min);
 }

@@ -7,13 +7,14 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class SimpleToggle : MonoBehaviour
 {
-    [SerializeField] private bool _isActive;
-    [SerializeField] private Image _onActiveImage;
-    [SerializeField] private Image _onNotActiveImage;
+    [SerializeField] private Image _isOnImage;
+    [SerializeField] private Image _isOffImage;
 
     private Button _button;
 
     public event Action<bool> Toggled;
+
+    [field: SerializeField] public bool IsOn { get; private set; }
 
     private void OnValidate()
         => ToggleImages();
@@ -29,26 +30,26 @@ public class SimpleToggle : MonoBehaviour
 
     private void Toggle()
     {
-        if (_onActiveImage != null && _onNotActiveImage != null)
+        if (_isOnImage != null && _isOffImage != null)
         {
-            _isActive = !_isActive;
+            IsOn = !IsOn;
             ToggleImages();
 
-            Toggled?.Invoke(_isActive);
+            Toggled?.Invoke(IsOn);
         }
     }
 
     private void ToggleImages()
     {
-        if (_isActive)
+        if (IsOn)
         {
-            _onActiveImage.gameObject.SetActive(true);
-            _onNotActiveImage.gameObject.SetActive(false);
+            _isOnImage.gameObject.SetActive(true);
+            _isOffImage.gameObject.SetActive(false);
         }
         else
         {
-            _onActiveImage.gameObject.SetActive(false);
-            _onNotActiveImage.gameObject.SetActive(true);
+            _isOnImage.gameObject.SetActive(false);
+            _isOffImage.gameObject.SetActive(true);
         }
     }
 }

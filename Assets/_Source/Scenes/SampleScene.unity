@@ -438,9 +438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7c8e8e93fdb2041a7aee8bde9b330e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isActive: 1
-  _onActiveImage: {fileID: 1430641089}
-  _onNotActiveImage: {fileID: 445531089}
+  _isOnImage: {fileID: 1430641089}
+  _isOffImage: {fileID: 445531089}
+  <IsOn>k__BackingField: 1
 --- !u!114 &271952232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,32 +705,19 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixerParameter
+      value: SoundsVolume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 307843854}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
---- !u!1 &307843853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-  m_PrefabInstance: {fileID: 307843852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &307843854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307843853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d00535b11e38d645af6e567daece5f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
 --- !u!1 &324030994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,32 +1364,19 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixerParameter
+      value: MusicVolume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 641835356}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
---- !u!1 &641835355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-  m_PrefabInstance: {fileID: 641835354}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &641835356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641835355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d8f8605badb7b648a7d2cad31b81051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
 --- !u!1 &644891523
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,32 +4477,19 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
+    - target: {fileID: 8777564778508472739, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
+      propertyPath: _audioMixerParameter
+      value: MasterVolume
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1925333483}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
---- !u!1 &1925333482 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4131283471171156198, guid: 95d3ffe60ad31e749b4c66489de9c6fd, type: 3}
-  m_PrefabInstance: {fileID: 1925333481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1925333483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925333482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7298bfd6f1949d4aac003c12c451dd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: 554e5dcff00af344a93ea96eb2d4011c, type: 2}
 --- !u!1 &1999999564
 GameObject:
   m_ObjectHideFlags: 0

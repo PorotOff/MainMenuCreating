@@ -11,6 +11,9 @@ public class VolumeToggler : MonoBehaviour
     private void Awake()
         => _simpleToggle = GetComponent<SimpleToggle>();
 
+    private void Start()
+        => Toggle(_simpleToggle.IsOn);
+
     private void OnEnable()
         => _simpleToggle.Toggled += Toggle;
 
